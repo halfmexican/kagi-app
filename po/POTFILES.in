@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/io.github.halfmexican.kagi.desktop.in
+data/io.github.halfmexican.kagi.metainfo.xml.in
+data/io.github.halfmexican.kagi.gschema.xml
+src/main.vala
+src/window.vala
+src/window.ui

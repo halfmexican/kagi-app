@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="kagi-app">
+	<schema id="io.github.halfmexican.kagi" path="/io/github/halfmexican/kagi/">
+	</schema>
+</schemalist>

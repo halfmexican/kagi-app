@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=kagi-app
+Exec=kagi-app
+Icon=io.github.halfmexican.kagi
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true
