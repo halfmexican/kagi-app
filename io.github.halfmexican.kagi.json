@@ -3,9 +3,6 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "47",
     "sdk" : "org.gnome.Sdk",
-    "sdk-extensions" : [
-        "org.freedesktop.Sdk.Extension.vala"
-    ],
     "command" : "kagi-app",
     "finish-args" : [
         "--share=network",

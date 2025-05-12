@@ -8,6 +8,7 @@ kagi_app_deps = [
   config_dep,
   dependency('gtk4'),
   dependency('libadwaita-1', version: '>= 1.4'),
+  dependency('webkitgtk-6.0'),
 ]
 
 blueprints = custom_target('blueprints',
