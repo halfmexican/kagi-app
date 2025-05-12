@@ -1,10 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
-
-using Gtk 4.0;
-using Adw 1;
-
-template $KagiAppWindow : Adw.ApplicationWindow  {
+using WebKit 6.0;
+template $KagiAppWindow : Adw.ApplicationWindow {
   title: _("Kagi App");
   default-width: 800;
   default-height: 600;
@@ -22,21 +19,34 @@ template $KagiAppWindow : Adw.ApplicationWindow  {
       }
     }
 
-    Adw.StatusPage {
-      title: _("My App");
-      description: _("My App is awesome");
+    content: Adw.OverlaySplitView split_view {
+      show-sidebar: true;
 
-      Box {
+      sidebar: Box {
         orientation: vertical;
-        
-        Button {
+        margin-top: 12;
+        margin-bottom: 12;
+        margin-start: 12;
+        margin-end: 6;
+        valign: fill;
+        hexpand: false;
+
+        Button open_dir_btn {
           label: _("Open Directory");
           halign: center;
-          styles ["pill"]
+          styles [ "pill" ]
         }
-      
-      }
-    }
+
+        ListBox file_list {
+          selection-mode: browse;
+        }
+      };
+
+      content: WebKit.WebView web_view {
+        hexpand: true;
+        vexpand: true;
+      };
+    };
   };
 }
 
