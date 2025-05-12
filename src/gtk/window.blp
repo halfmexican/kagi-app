@@ -7,7 +7,7 @@ template $KagiAppWindow : Adw.ApplicationWindow {
   default-height: 600;
 
   content: Adw.ToolbarView {
-    top-bar-style: raised;
+    top-bar-style: raised_border;
 
     [top]
     Adw.HeaderBar {
@@ -17,30 +17,22 @@ template $KagiAppWindow : Adw.ApplicationWindow {
         icon-name: "open-menu-symbolic";
         primary: true;
       }
+
+      [start]
+         Button open_dir_btn {
+          label: _("Open Directory");
+          halign: center;
+        }
     }
 
     content: Adw.OverlaySplitView split_view {
       show-sidebar: true;
-
-      sidebar: Box {
-        orientation: vertical;
-        margin-top: 12;
-        margin-bottom: 12;
-        margin-start: 12;
-        margin-end: 6;
-        valign: fill;
-        hexpand: false;
-
-        Button open_dir_btn {
-          label: _("Open Directory");
-          halign: center;
-          styles [ "pill" ]
-        }
+      sidebar-width-fraction: 0.25;
+      sidebar:
 
         ListBox file_list {
           selection-mode: browse;
-        }
-      };
+        };
 
       content: Box main_box {
         hexpand: true;
